@@ -13,9 +13,9 @@ output "price" {
 }
 
 data "aws_security_group" "selected" {
-  name = "allow-all"
+  id = sg-0710514ddbbda24c3
 }
 
 output "sgid" {
-  value = data.aws_security_group.selected.id
+  value = data.aws_security_group.selected.name
 }
