@@ -5,7 +5,6 @@ resource "aws_instance" "web" {
   tags = {
     Name = "HelloWorld"
   }
-
   provisioner "remote-exec" {
     connection {
       type     = "ssh"
@@ -18,7 +17,6 @@ resource "aws_instance" "web" {
       "ansible-pull -i localhost, -u https://github.com/SushmaNelli/roboshop-ansible main.yml -e env=dev -e role_name=frontend",
     ]
   }
-
 }
 
 data "aws_ami" "example" {
