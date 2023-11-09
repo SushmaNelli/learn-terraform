@@ -39,6 +39,6 @@ output "fruit_4" {
   value = element(var.fruits, 4)
 }
 
-output "fruit_4" {
-  value = var.fruits[4]
+output "fruit_3" {
+  value = var.fruits[3]
 }
