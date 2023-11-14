@@ -18,7 +18,7 @@ resource "null_resource" "ansible" {
       user     = "centos"
       password = "DevOps321"
       host     = aws_instance.web.public_ip
-}
+    }
     inline = [
       "sudo labauto ansible",
       "ansible-pull -i localhost, -U https://github.com/SushmaNelli/roboshop-ansible main.yml -e env=dev -e role_name=${var.name}"
